@@ -2,7 +2,7 @@ import React from 'react';
 import {VerticalNavigationProps} from "@/lib/type/navigation";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import SubHorizontalNavigationContent from "@/component/layout/navigation/SubHorizontalNavigationContent";
+import SubHorizontalNavigationContent from "@/component/layout/navigation/part/SubHorizontalNavigationContent";
 
 export default function HorizontalNavigationContent({
     dataNavigation,

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import {useParams, usePathname} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
-import HorizontalNavigationContent from "@/component/layout/navigation/HorizontalNavigationContent";
+import HorizontalNavigationContent from "@/component/layout/navigation/part/HorizontalNavigationContent";
 
 export default function DesktopNavigation() {
     const router = usePathname();

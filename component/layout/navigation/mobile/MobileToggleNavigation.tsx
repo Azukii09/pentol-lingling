@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {HiBars3CenterLeft, HiMiniXMark} from "react-icons/hi2";
 import LanguageChanger from "@/component/util/LanguageChanger";
-import VerticalNavigationContent from "@/component/layout/navigation/VerticalNavigationContent";
+import VerticalNavigationContent from "@/component/layout/navigation/part/VerticalNavigationContent";
 import {useParams} from "next/navigation";
 import Logo from "@/component/util/Logo";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";

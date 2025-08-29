@@ -1,7 +1,7 @@
 import React from 'react';
 import {usePathname} from "next/navigation";
 import Link from "next/link";
-import SubVerticalNavigationContent from "@/component/layout/navigation/SubVerticalNavigationContent";
+import SubVerticalNavigationContent from "@/component/layout/navigation/part/SubVerticalNavigationContent";
 import {VerticalNavigationProps} from "@/lib/type/navigation";
 
 export default function VerticalNavigationContent({

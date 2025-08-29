@@ -11,7 +11,7 @@ export default function Navigation() {
         <>
             {/*large*/}
             <div className="hidden md:flex">
-                <nav className={"global-padding w-full flex text-lg justify-between items-center bg-tertiary text-black py-4"}>
+                <nav className={"global-padding w-full flex text-lg justify-between items-center bg-tertiary text-white py-4"}>
                     <div className={"w-1/4"}>
                         <Logo/>
                     </div>
@@ -27,7 +27,7 @@ export default function Navigation() {
             {/*mobile*/}
             <div className="flex md:hidden">
                 {/*navigation parent*/}
-                <nav className={"global-padding w-full flex justify-between items-center py-2 bg-tertiary text-black relative"}>
+                <nav className={"global-padding w-full flex justify-between items-center py-2 bg-tertiary text-white relative"}>
                     {/*logo*/}
                     <Logo/>
                     <MobileToggleNavigation/>
