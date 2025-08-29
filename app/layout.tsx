@@ -1,5 +1,6 @@
 import "./globals.css";
 import React from "react";
+import {roboto} from "@/lib/font/font";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${roboto.className} antialiased`}
       >
         {children}
       </body>
