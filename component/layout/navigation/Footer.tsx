@@ -11,7 +11,7 @@ export default function Footer() {
     const params = useParams();
     const dataNavigation =  landingNavigationData.find((item) => item.locale === params.locale);
     return (
-        <footer className={"bg-tertiary text-white h-full global-padding py-6 gap-4"}>
+        <footer className={"bg-zinc-800 text-white h-full global-padding py-6 gap-4"}>
             {/*footer content*/}
             <div className={"flex justify-between flex-col md:flex-row gap-4"}>
                 {/*first*/}
