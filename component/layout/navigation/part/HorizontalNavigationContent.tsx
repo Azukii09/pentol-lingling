@@ -31,10 +31,10 @@ export default function HorizontalNavigationContent({
                         className={`
                                         ${router.includes(item.link) ? "text-secondary rounded-md hover:text-primary":"hover:text-secondary"} 
                                         ${router.includes(item.link)
-                            ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
-                            : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
-                        }
-                                        relative inline-flex justify-between font-bold px-3 py-1 
+                                            ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
+                                            : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
+                                        }
+                                        relative inline-flex justify-between font-semibold text-base px-3 py-1 
                                         lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-secondary lg:after:transition-transform lg:after:duration-400 lg:after:transform
                                     `}
                     >

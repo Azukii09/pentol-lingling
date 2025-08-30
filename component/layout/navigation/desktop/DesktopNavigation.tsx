@@ -3,13 +3,14 @@ import Link from "next/link";
 import {useParams, usePathname} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
 import HorizontalNavigationContent from "@/component/layout/navigation/part/HorizontalNavigationContent";
+import { poppins} from "@/lib/font/font";
 
 export default function DesktopNavigation() {
     const router = usePathname();
     const params = useParams();
     const dataNavigation =  landingNavigationData.find((item) => item.locale === params.locale);
     return (
-        <div className={"flex gap-4"}>
+        <div className={`${poppins.className} flex gap-4`}>
             {dataNavigation?.navigation?.map((item,index) => {
                 const activeLink = (router.endsWith(item.link));
                 return(
@@ -23,7 +24,7 @@ export default function DesktopNavigation() {
                                     ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
                                     : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
                                 }
-                                relative inline-flex justify-between font-bold px-3 py-1 
+                                relative inline-flex justify-between font-semibold text-base px-3 py-1 
                                 lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-secondary lg:after:transition-transform lg:after:duration-400 lg:after:transform
                             `}
                             >
@@ -47,7 +48,7 @@ export default function DesktopNavigation() {
                                 ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
                                 : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
                             }
-                                relative inline-flex items-center justify-between font-bold px-3 py-1 
+                                relative inline-flex items-center justify-between font-semibold text-base px-3 py-1 
                                 lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-secondary lg:after:transition-transform lg:after:duration-400 lg:after:transform
                             `}
                         >
