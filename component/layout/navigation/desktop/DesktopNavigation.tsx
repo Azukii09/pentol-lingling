@@ -29,8 +29,8 @@ export default function DesktopNavigation() {
                             >
                                 {item.name}
                             </div>
-                            <div className={"absolute group-hover:flex bg-tertiary pt-4 text-white top-full right-0 text-nowrap w-full scale-y-0  group-hover:scale-y-100 transition-all duration-400 origin-top opacity-0 group-hover:opacity-100 rounded-b-sm"}>
-                                <div className={"w-full h-full px-8 py-4 border-t-1 border-slate-500 rounded-b-sm"}>
+                            <div className={"absolute group-hover:flex bg-white pt-4 text-primary top-full right-0 text-nowrap w-full scale-y-0  group-hover:scale-y-100 transition-all duration-400 origin-top opacity-0 group-hover:opacity-100 rounded-b-sm"}>
+                                <div className={"w-full h-full px-8 py-4 border-1 border-slate-200 rounded-b-md shadow-sm shadow-slate-200"}>
                                     <div className={"w-full overflow-y-scroll max-h-96"}>
                                         <HorizontalNavigationContent dataNavigation={item.navigation}/>
                                     </div>
