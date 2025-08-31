@@ -6,10 +6,12 @@ import {HiMap, HiPhone} from "react-icons/hi";
 import {FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
 import {useParams} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
+import {useTranslations} from "next-intl";
 
 export default function Footer() {
     const params = useParams();
     const dataNavigation =  landingNavigationData.find((item) => item.locale === params.locale);
+    const tFooter = useTranslations("Footer");
     return (
         <footer className={"bg-zinc-800 text-white h-full global-padding py-6 gap-4"}>
             {/*footer content*/}
@@ -48,7 +50,7 @@ export default function Footer() {
                 {/*middle*/}
                 <div className={"flex gap-4 flex-col md:flex-row w-full md:w-1/3"}>
                     <div className={"w-1/2 flex flex-col gap-2"}>
-                        <h2 className={" font-bold text-md"}>Navigasi cepat</h2>
+                        <h2 className={" font-bold text-md"}>{tFooter('navigation')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             {dataNavigation?.navigation.map((item, index) => (
                                 <li key={index}>→ {item.name}</li>
