@@ -13,12 +13,12 @@ export default function Footer() {
     const dataNavigation =  landingNavigationData.find((item) => item.locale === params.locale);
     const tFooter = useTranslations("Footer");
     return (
-        <footer className={"bg-zinc-800 text-white h-full global-padding py-6 gap-4"}>
+        <footer className={"bg-zinc-900 text-white h-full global-padding py-6 gap-4"}>
             {/*footer content*/}
             <div className={"flex justify-between flex-col md:flex-row gap-4"}>
                 {/*first*/}
                 <div className={"flex gap-4 flex-col w-full md:w-1/3"}>
-                    <div className={""}>
+                    <div className={"text-rose-600"}>
                         {companyName}
                     </div>
                     <div className={"flex flex-col gap-4 pl-4"}>
@@ -50,7 +50,7 @@ export default function Footer() {
                 {/*middle*/}
                 <div className={"flex gap-4 flex-col md:flex-row w-full md:w-1/3"}>
                     <div className={"w-1/2 flex flex-col gap-2"}>
-                        <h2 className={" font-bold text-md capitalize"}>{tFooter('navigation')}</h2>
+                        <h2 className={" font-bold text-md capitalize text-rose-600"}>{tFooter('navigation')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             {dataNavigation?.navigation.map((item, index) => (
                                 <li key={index}>→ {item.name}</li>
@@ -58,7 +58,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className={"w-1/2 flex flex-col gap-2"}>
-                        <h2 className={" font-bold text-md capitalize"}>{tFooter('ctaAbout')}</h2>
+                        <h2 className={" font-bold text-md capitalize text-rose-600"}>{tFooter('ctaAbout')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             <li>Mari saling mengenal dan buat jadwal untuk konsultasi</li>
                         </ul>
