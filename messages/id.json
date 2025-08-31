@@ -1,5 +1,8 @@
 {
   "HomePage": {
     "title": "Halo dunia!"
+  },
+  "Footer": {
+    "navigation": "Navigasi Cepat"
   }
 }
