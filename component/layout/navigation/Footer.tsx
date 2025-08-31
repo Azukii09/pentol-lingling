@@ -25,21 +25,21 @@ export default function Footer() {
                         {/*email*/}
                         <div className={" flex gap-2 items-center"}>
                             <div className={"flex justify-center items-center"}>
-                                <HiEnvelope className={"size-6"} />
+                                <HiEnvelope className={"size-6 text-rose-600"} />
                             </div>
                             <span className={" text-md md:text-sm"}>{email}</span>
                         </div>
                         {/*wa*/}
                         <div className={" flex gap-2 items-center"}>
                             <div className={"flex justify-center items-center"}>
-                                <HiPhone className={"size-6"} />
+                                <HiPhone className={"size-6 text-rose-600"} />
                             </div>
                             <span className={" text-md md:text-sm"}>{phone}</span>
                         </div>
                         {/*alamat*/}
                         <div className={" flex gap-2 items-center"}>
                             <div className={"flex justify-center items-center"}>
-                                <HiMap className={"size-6"} />
+                                <HiMap className={"size-6 text-rose-600"} />
                             </div>
                             <span className={" text-md md:text-sm"}>{address}</span>
                         </div>
@@ -71,13 +71,13 @@ export default function Footer() {
                     <div className={"flex gap-2 flex-col"}>
                         <h2 className={" font-bold text-md"}>Sosial Media</h2>
                         <div className={"flex gap-4"}>
-                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaWhatsapp className={"size-6"} />
                             </div>
-                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaInstagram className={"size-6"} />
                             </div>
-                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaLinkedinIn className={"size-6"} />
                             </div>
                         </div>
@@ -89,7 +89,7 @@ export default function Footer() {
             <div className={"mt-8"}>
                 <hr className="border-t border-white my-2" />
                 <div className="flex items-center justify-center space-x-2 px-4 py-2 text-sm ">
-                    © 2025 {companyName}. All rights reserved.
+                    <span className={"text-rose-600"}>© 2025&nbsp;</span> {companyName}. All rights reserved.
                 </div>
             </div>
         </footer>
