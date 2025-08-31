@@ -50,7 +50,7 @@ export default function Footer() {
                 {/*middle*/}
                 <div className={"flex gap-4 flex-col md:flex-row w-full md:w-1/3"}>
                     <div className={"w-1/2 flex flex-col gap-2"}>
-                        <h2 className={" font-bold text-md"}>{tFooter('navigation')}</h2>
+                        <h2 className={" font-bold text-md capitalize"}>{tFooter('navigation')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             {dataNavigation?.navigation.map((item, index) => (
                                 <li key={index}>→ {item.name}</li>
@@ -58,7 +58,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className={"w-1/2 flex flex-col gap-2"}>
-                        <h2 className={" font-bold text-md"}>Ingin tahu lebih lanjut?</h2>
+                        <h2 className={" font-bold text-md capitalize"}>{tFooter('ctaAbout')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             <li>Mari saling mengenal dan buat jadwal untuk konsultasi</li>
                         </ul>
