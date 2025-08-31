@@ -3,6 +3,7 @@
     "title": "Hello world!"
   },
   "Footer": {
-    "navigation": "Quick Navigation"
+    "navigation": "Quick Navigation",
+    "ctaAbout": "Want to know more?"
   }
 }
