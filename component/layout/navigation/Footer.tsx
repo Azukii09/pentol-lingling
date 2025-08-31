@@ -69,13 +69,13 @@ export default function Footer() {
                     <div className={"flex gap-2 flex-col"}>
                         <h2 className={" font-bold text-md"}>Sosial Media</h2>
                         <div className={"flex gap-4"}>
-                            <div className={"bg-primary text-white lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaWhatsapp className={"size-6"} />
                             </div>
-                            <div className={"bg-primary text-white lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaInstagram className={"size-6"} />
                             </div>
-                            <div className={"bg-primary text-white lg:text-main size-8 rounded-md p-1"}>
+                            <div className={"bg-zinc-200 text-zinc-600 lg:text-main size-8 rounded-md p-1"}>
                                 <FaLinkedinIn className={"size-6"} />
                             </div>
                         </div>
