@@ -3,11 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
 import {roboto} from "@/lib/font/font";
-import Button from "@/app/component/util/Button";
+import Button from "@/component/util/Button";
 
 export default function Hero() {
     return (
-        <section className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-tertiary/80 via-primary/60 to-secondary/40 text-white -z-10`}>
+        <section className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-300 via-primary/45 to-slate-300 text-white -z-10`}>
             <div className="container mx-auto px-4 md:px-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
                     {/* Left Content */}
@@ -58,9 +58,9 @@ export default function Hero() {
                         transition={{duration: 0.8, delay: 0.3}}
                         className="w-full md:w-1/2 relative"
                     >
-                        <div className="relative w-full aspect-square md:aspect-[4/3]">
+                        <div className="relative w-full aspect-square md:aspect-1">
                             <Image
-                                src="/img/hero/hero-1.png"
+                                src="/img/logo.png"
                                 alt="Business Illustration"
                                 fill
                                 className="object-cover rounded-2xl"
@@ -68,7 +68,7 @@ export default function Hero() {
                                 sizes="(min-width: 1024px) 50vw, 100vw" // <-- Add this line
                             />
                             <div
-                                className="absolute inset-0 bg-purple-500/20 rounded-full"/>
+                                className="absolute inset-4 bg-green-700 rounded-full -z-10"/>
                         </div>
                     </motion.div>
                 </div>
