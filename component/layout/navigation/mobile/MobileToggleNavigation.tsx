@@ -22,7 +22,7 @@ export default function MobileToggleNavigation() {
                 />
 
                 {/*navigation content and parent content*/}
-                <div className={`${isOpen ? "translate-x-0" : "translate-x-full"} fixed bg-white w-screen h-screen right-0 top-0 flex flex-col gap-2 transition-transform duration-600 ease-in-out text-primary`}>
+                <div className={`${isOpen ? "translate-x-0" : "translate-x-full"} fixed bg-white w-screen h-screen right-0 top-0 flex flex-col gap-2 transition-transform duration-600 ease-in-out text-quaternary`}>
                     {/*navigation content sub parent*/}
                     <div className={"w-full h-full bg-slate-200 fixed p-8"}>
                         {/*action button for navigation content*/}

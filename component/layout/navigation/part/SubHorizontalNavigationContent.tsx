@@ -24,13 +24,13 @@ export default function SubHorizontalNavigationContent({
         <div className={"flex flex-col gap-4"}>
             <button
                 onClick={()=> setActive(!active)}
-                className={`${router.includes(link as string) ? "text-secondary rounded-md hover:text-primary":"hover:text-secondary"} 
+                className={`${router.includes(link as string) ? "text-primary rounded-md hover:text-quaternary":"hover:text-primary"} 
                         ${router.includes(link as string)
                     ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
                     : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
                 }
                         relative inline-flex justify-between font-semibold text-base px-3 py-1 
-                        lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-secondary lg:after:transition-transform lg:after:duration-400 lg:after:transform`}
+                        lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-primary lg:after:transition-transform lg:after:duration-400 lg:after:transform`}
             >
                 <div className={`flex items-center max-w-36`}>
                     {parentIcon}

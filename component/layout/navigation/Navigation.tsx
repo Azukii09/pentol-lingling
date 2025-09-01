@@ -32,7 +32,7 @@ export default function Navigation() {
             <div className="hidden md:flex relative">
                 <nav className={`
                             ${heading && "fixed z-50"}
-                            global-padding w-full flex text-lg justify-between items-center bg-white text-primary py-4 shadow-sm shadow-slate-200`}
+                            global-padding w-full flex text-lg justify-between items-center bg-white text-quaternary py-4 shadow-sm shadow-slate-200`}
                 >
                     <div className={"w-1/4"}>
                         <Logo/>
@@ -49,7 +49,7 @@ export default function Navigation() {
             {/*mobile*/}
             <div className="flex md:hidden relative">
                 {/*navigation parent*/}
-                <nav className={`${heading ? "fixed z-50":"relative"} global-padding w-full flex justify-between items-center py-2 bg-white text-primary shadow-sm shadow-slate-200`}>
+                <nav className={`${heading ? "fixed z-50":"relative"} global-padding w-full flex justify-between items-center py-2 bg-white text-quaternary shadow-sm shadow-slate-200`}>
                     {/*logo*/}
                     <Logo/>
                     <MobileToggleNavigation/>
