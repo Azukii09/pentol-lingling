@@ -6,5 +6,10 @@
     "navigation": "Quick Navigation",
     "ctaAbout": "Want to know more?",
     "msgAbout": "Let's get to know each other and schedule a consultation"
+  },
+  "Hero": {
+    "title": "Enjoy Healthy & Tasty Pentol",
+    "description": "Come with a fresh and authentic taste, preservative-free, affordable, and perfect for all ages.",
+    "cta": "Order now"
   }
 }

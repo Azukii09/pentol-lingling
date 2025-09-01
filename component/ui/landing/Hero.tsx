@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import Image from "next/image";
 import {amatic_sc, roboto} from "@/lib/font/font";
 import Button from "@/component/util/Button";
+import {useTranslations} from "next-intl";
 
 export default function Hero() {
+    const tHero = useTranslations('Hero')
     return (
         <section className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-300 via-primary/45 to-slate-300 text-white -z-10`}>
             <div className="container mx-auto px-4 md:px-10">
@@ -23,7 +25,7 @@ export default function Hero() {
                             transition={{duration: 0.6, delay: 0.2}}
                             className={`${amatic_sc.className} text-5xl md:text-7xl font-bold leading-tight drop-shadow drop-shadow-primary`}
                         >
-                            Nikmati Pentol Sehat & Lezat
+                            {tHero('title')}
                         </motion.h1>
                         <motion.p
                             initial={{opacity: 0, y: 20}}
@@ -31,7 +33,7 @@ export default function Hero() {
                             transition={{duration: 0.6, delay: 0.4}}
                             className={'mt-6 text-lg md:text-2xl drop-shadow-green-900 drop-shadow'}
                         >
-                            Hadir dengan rasa otentik tanpa pengawet, harga ramah, cocok untuk semua usia.
+                            {tHero('description')}
                         </motion.p>
                         <motion.div
                             initial={{opacity: 0, y: 20}}
@@ -43,8 +45,8 @@ export default function Hero() {
                                 buttonType={"button"}
                                 variant={"primary"}
                                 variantType={"solid-rounded"}
-                                buttonName={"get-started"}
-                                buttonText={"Get Started"}
+                                buttonName={"order-now"}
+                                buttonText={tHero('cta')}
                                 size={"lg"}
                             />
                         </motion.div>
