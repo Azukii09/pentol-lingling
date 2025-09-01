@@ -8,6 +8,7 @@ import {useParams} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
 import {useTranslations} from "next-intl";
 import Link from "next/link";
+import Logo from "@/component/util/Logo";
 
 export default function Footer() {
     const params = useParams();
@@ -19,7 +20,8 @@ export default function Footer() {
             <div className={"flex justify-between flex-col md:flex-row gap-4"}>
                 {/*first*/}
                 <div className={"flex gap-4 flex-col w-full md:w-1/3"}>
-                    <div className={"text-rose-600"}>
+                    <div className={"text-rose-600 flex gap-2 items-center"}>
+                        <Logo/>
                         {companyName}
                     </div>
                     <div className={"flex flex-col gap-4 pl-4"}>
