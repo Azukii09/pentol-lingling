@@ -68,7 +68,7 @@ export default function Footer() {
                     <div className={"w-1/2 flex flex-col gap-2"}>
                         <h2 className={" font-bold text-md capitalize text-rose-600"}>{tFooter('ctaAbout')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
-                            <li>Mari saling mengenal dan buat jadwal untuk konsultasi</li>
+                            <li>{tFooter('msgAbout')}</li>
                         </ul>
                     </div>
                 </div>
