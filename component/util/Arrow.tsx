@@ -22,7 +22,7 @@ export default function Arrow({
                     height: 0,
                     borderTop: `${arrowSize}px solid transparent`,
                     borderBottom: `${arrowSize}px solid transparent`,
-                    borderRight: `${arrowSize * 1.5}px solid #5D81E2`,
+                    borderRight: `${arrowSize * 1.5}px solid #90a1b9`,
                 }}
             />
             {/* Badan panah: segitiga mengerucut horizontal */}
@@ -35,7 +35,7 @@ export default function Arrow({
             >
                 <defs>
                     <linearGradient id="bodyGradient" x1="0" y1="0" x2={arrowLength} y2="0" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stopColor="var(--color-primary)" />
+                        <stop offset="0%" stopColor="var(--color-slate-400)" />
                         <stop offset="100%" stopColor="#fff" />
                     </linearGradient>
                 </defs>
