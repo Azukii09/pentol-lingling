@@ -2,14 +2,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
-import {roboto} from "@/lib/font/font";
+import {amatic_sc, roboto} from "@/lib/font/font";
 import Button from "@/component/util/Button";
 
 export default function Hero() {
     return (
         <section className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-300 via-primary/45 to-slate-300 text-white -z-10`}>
             <div className="container mx-auto px-4 md:px-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
                     {/* Left Content */}
                     <motion.div
                         initial={{opacity: 0, y: 20}}
@@ -21,18 +21,17 @@ export default function Hero() {
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.6, delay: 0.2}}
-                            className="text-4xl md:text-5xl font-bold leading-tight"
+                            className={`${amatic_sc.className} text-5xl md:text-7xl font-bold leading-tight drop-shadow drop-shadow-primary`}
                         >
-                            Grow Your <span className="">Business</span> with Confidence
+                            Nikmati Pentol Sehat & Lezat
                         </motion.h1>
                         <motion.p
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.6, delay: 0.4}}
-                            className="mt-6 text-md"
+                            className={'mt-6 text-lg md:text-2xl drop-shadow-green-900 drop-shadow'}
                         >
-                            We help companies like yours achieve success through strategic planning, business
-                            consulting, and cutting-edge technology.
+                            Hadir dengan rasa otentik tanpa pengawet, harga ramah, cocok untuk semua usia.
                         </motion.p>
                         <motion.div
                             initial={{opacity: 0, y: 20}}
@@ -42,7 +41,7 @@ export default function Hero() {
                         >
                             <Button
                                 buttonType={"button"}
-                                variant={"secondary"}
+                                variant={"primary"}
                                 variantType={"solid-rounded"}
                                 buttonName={"get-started"}
                                 buttonText={"Get Started"}
@@ -54,8 +53,20 @@ export default function Hero() {
                     {/* Right Image */}
                     <motion.div
                         initial={{opacity: 0, x: 100}}
-                        animate={{opacity: 1, x: 0}}
-                        transition={{duration: 0.8, delay: 0.3}}
+                        animate={{
+                            opacity: 1,
+                            x: 0,
+                            y: [0, -20, 0]
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.3,
+                            y: {
+                                duration: 2,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }
+                        }}
                         className="w-full md:w-1/2 relative"
                     >
                         <div className="relative w-full aspect-square md:aspect-1">
