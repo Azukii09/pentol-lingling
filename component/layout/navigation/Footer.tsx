@@ -7,6 +7,7 @@ import {FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
 import {useParams} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
 import {useTranslations} from "next-intl";
+import Link from "next/link";
 
 export default function Footer() {
     const params = useParams();
@@ -53,7 +54,14 @@ export default function Footer() {
                         <h2 className={" font-bold text-md capitalize text-rose-600"}>{tFooter('navigation')}</h2>
                         <ul className={"flex flex-col gap-2 text-sm "}>
                             {dataNavigation?.navigation.map((item, index) => (
-                                <li key={index}>→ {item.name}</li>
+                                <li key={index}>
+                                    <Link
+                                        href={item.link}
+                                        className={"hover:text-rose-600"}
+                                    >
+                                        → {item.name}
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
