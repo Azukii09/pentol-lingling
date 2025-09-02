@@ -87,28 +87,99 @@ export default function MainAbout() {
                 </div>
             </div>
 
-            <div className={"flex flex-col gap-8 mt-10 p-4 lg:flex-row items-center justify-between"}>
-                <div className={"flex flex-col gap-8 mt-10 p-4 lg:flex-row items-stretch justify-between"}>
+            <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>
+                <div className={"flex flex-col gap-8 p-4 lg:flex-row items-stretch justify-between"}>
                     {/*left content*/}
-                    <div
-                        className={`bg-slate-50 text-quaternary font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}>
-                        <h1 className={`${amatic_sc.className} text-4xl`}>{data?.data.visi.title}</h1>
-                        <p className={"text-justify"}>{data?.data.visi.description}</p>
-                    </div>
+                    <motion.div
+                        initial={{opacity: 0, x: -100}}
+                        whileInView={{
+                            opacity: 1,
+                            x: 0,
+                        }}
+                        viewport={{once: false, margin: "-100px"}}
+                        transition={{
+                            duration: 0.8,
+                            type: "spring",
+                            bounce: 0.4,
+                            stiffness: 70
+                        }}
+                        className={`bg-slate-50 text-quaternary font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}
+                    >
+                        <motion.h1
+                            initial={{opacity: 0, y: -20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false}}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.2
+                            }}
+                            className={`${amatic_sc.className} text-4xl`}
+                        >
+                            {data?.data.visi.title}
+                        </motion.h1>
+                        <motion.p
+                            initial={{opacity: 0, y: 20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false}}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.4
+                            }}
+                            className={"text-justify"}
+                        >
+                            {data?.data.visi.description}
+                        </motion.p>
+                    </motion.div>
 
                     {/*right content*/}
-                    <div
-                        className={`bg-rose-500 text-white font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}>
-                        <h1 className={`${amatic_sc.className} text-4xl`}>{data?.data.misi.title}</h1>
+                    <motion.div
+                        initial={{opacity: 0, x: 100}}
+                        whileInView={{
+                            opacity: 1,
+                            x: 0,
+                        }}
+                        viewport={{once: false, margin: "-100px"}}
+                        transition={{
+                            duration: 0.8,
+                            type: "spring",
+                            bounce: 0.4,
+                            stiffness: 70
+                        }}
+                        className={`bg-rose-500 text-white font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}
+                    >
+                        <motion.h1
+                            initial={{opacity: 0, y: -20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false}}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.2
+                            }}
+                            className={`${amatic_sc.className} text-4xl`}
+                        >
+                            {data?.data.misi.title}
+                        </motion.h1>
                         <ul className={"text-justify"}>
                             {data?.data.misi.detail.map((item, index) => (
-                                <li key={index} className={"flex gap-2"}>
+                                <motion.li 
+                                    key={index}
+                                    initial={{opacity: 0, x: 50}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{once: false}}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: 0.4 + (index * 0.1),
+                                        type: "spring",
+                                        bounce: 0.3
+                                    }}
+                                    className={"flex gap-2"}
+                                >
                                     {item.icon}
                                     <p>{item.description}</p>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
