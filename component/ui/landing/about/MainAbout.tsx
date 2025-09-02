@@ -88,7 +88,7 @@ export default function MainAbout() {
             </div>
 
             <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>
-                <div className={"flex flex-col gap-8 p-4 lg:flex-row items-stretch justify-between"}>
+                <div className={"flex flex-col gap-8 p-4 lg:flex-row lg:items-stretch items-center justify-between"}>
                     {/*left content*/}
                     <motion.div
                         initial={{opacity: 0, x: -100}}
