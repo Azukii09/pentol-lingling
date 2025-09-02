@@ -86,6 +86,31 @@ export default function MainAbout() {
                     </div>
                 </div>
             </div>
+
+            <div className={"flex flex-col gap-8 mt-10 p-4 lg:flex-row items-center justify-between"}>
+                <div className={"flex flex-col gap-8 mt-10 p-4 lg:flex-row items-stretch justify-between"}>
+                    {/*left content*/}
+                    <div
+                        className={`bg-slate-50 text-quaternary font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}>
+                        <h1 className={`${amatic_sc.className} text-4xl`}>{data?.data.visi.title}</h1>
+                        <p className={"text-justify"}>{data?.data.visi.description}</p>
+                    </div>
+
+                    {/*right content*/}
+                    <div
+                        className={`bg-rose-500 text-white font-semibold w-full md:w-1/2 flex flex-col gap-4 justify-center items-center p-8 shadow-md shadow-slate-500`}>
+                        <h1 className={`${amatic_sc.className} text-4xl`}>{data?.data.misi.title}</h1>
+                        <ul className={"text-justify"}>
+                            {data?.data.misi.detail.map((item, index) => (
+                                <li key={index} className={"flex gap-2"}>
+                                    {item.icon}
+                                    <p>{item.description}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }
