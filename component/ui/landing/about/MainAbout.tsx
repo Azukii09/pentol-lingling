@@ -12,10 +12,17 @@ export default function MainAbout() {
     const tAbout = useTranslations('About')
     return (
         <section className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
-            <TitleArrow text={tAbout('about')} size={width}/>
-            <h1 className={`${amatic_sc.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-semibold`}>
+            <motion.div
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: false}}
+                transition={{duration: 0.8}}
+            >
+                <TitleArrow text={tAbout('about')} size={width}/>
+                <h1 className={`${amatic_sc.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-semibold`}>
                 {tAbout('learnMore')} <span className={"text-rose-600"}>{tAbout('about')}</span>
-            </h1>
+                </h1>
+            </motion.div>
             <div className={"flex flex-col gap-4 mt-10 p-4 lg:flex-row items-center justify-between"}>
                 {/* Right Image */}
                 <motion.div
