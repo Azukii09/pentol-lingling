@@ -63,12 +63,25 @@ export default function MainAbout() {
                 <div className="w-full md:w-1/2 flex flex-col gap-4">
                     <div className={"flex flex-col gap-2"}>
                         {data?.data.aboutDescription.map((item, index) => (
-                            <p
+                            <motion.p
                                 key={index}
+                                initial={{opacity: 0, x: 100}}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                }}
+                                viewport={{once: false, margin: "-100px"}}
+                                transition={{
+                                    duration: 0.8,
+                                    delay: index * 0.3, // Staggered delay for each paragraph
+                                    type: "spring",
+                                    bounce: 0.4,
+                                    stiffness: 70
+                                }}
                                 className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}
                             >
                                 {item}
-                            </p>
+                            </motion.p>
                         ))}
                     </div>
                 </div>
