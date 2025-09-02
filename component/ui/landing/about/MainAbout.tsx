@@ -23,7 +23,7 @@ export default function MainAbout() {
                 {tAbout('learnMore')} <span className={"text-rose-600"}>{tAbout('about')}</span>
                 </h1>
             </motion.div>
-            <div className={"flex flex-col gap-4 mt-10 p-4 lg:flex-row items-center justify-between"}>
+            <div className={"flex flex-col gap-8 mt-10 p-4 lg:flex-row items-center justify-between"}>
                 {/* Left Image */}
                 <motion.div
                     initial={{opacity: 0, x: -100}}
@@ -56,8 +56,23 @@ export default function MainAbout() {
                 </motion.div>
 
                 {/*right content*/}
-                <div>
-                    konten
+                <div className="w-full md:w-1/2 flex flex-col gap-4">
+                    <div className={"flex flex-col gap-2"}>
+                        <p className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}>
+                            Pentol Ling Ling adalah brand kuliner yang lahir di Kepohbaru, Bojonegoro, Jawa Timur sejak
+                            Februari 2024. Selama 19 bulan perjalanan hingga kini, Pentol Ling Ling konsisten
+                            menghadirkan produk kuliner sehat tanpa bahan pengawet, dengan harga yang ramah dan cocok
+                            untuk segala usia. Berawal dari cita-cita sederhana untuk menjadi ikon kuliner Indonesia,
+                            Pentol Ling Ling membawa visi besar: menghadirkan usaha yang berkah dan barokah tanpa riba,
+                            sekaligus membuka peluang usaha bagi masyarakat luas melalui sistem agen dan reseller.
+                        </p>
+                        <p className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}>
+                            Dengan berbagai produk seperti pentol ayam, pentol sapi, dimsum siomay, tahu bakso, pangsit
+                            ayam, chili oil, hingga bumbu kuah bakso, Pentol Ling Ling telah dipercaya oleh café, resto,
+                            frozen food, sekolah, hingga berbagai event. Lebih dari sekadar produk kuliner, Pentol Ling
+                            Ling berkomitmen melahirkan pengusaha-pengusaha baru yang mampu bersaing di masa depan, menjaga inovasi, dan memberikan dampak positif bagi Indonesia.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
