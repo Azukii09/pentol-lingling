@@ -7,7 +7,7 @@ import {useTranslations} from "next-intl";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {useParams} from "next/navigation";
-import {aboutData} from "@/lib/data/content/aboutData";
+import {aboutData, aboutImg} from "@/lib/data/content/aboutData";
 
 export default function MainAbout() {
     const width = useWindowWidth()
@@ -45,9 +45,9 @@ export default function MainAbout() {
                     viewport={{once: false, margin: "-100px"}}
                     className="w-full md:w-1/2 relative"
                 >
-                    <div className="relative w-full aspect-square md:aspect-1">
+                    <div className="relative w-full aspect-square md:aspect-1 shadow-slate-500 shadow-md">
                         <Image
-                            src="/img/logo.png"
+                            src={aboutImg || "/img/gambar.jpg"}
                             alt="Business Illustration"
                             fill
                             className="object-cover rounded-2xl"
@@ -55,7 +55,7 @@ export default function MainAbout() {
                             sizes="(min-width: 1024px) 50vw, 100vw" // <-- Add this line
                         />
                         <div
-                            className="absolute inset-0 bg-green-700 rounded-lg -z-10"/>
+                            className="absolute inset-0 bg-green-700 -z-10"/>
                     </div>
                 </motion.div>
 

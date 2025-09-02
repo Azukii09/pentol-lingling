@@ -15,3 +15,5 @@ export const aboutData = [
         }
     },
 ]
+
+export const aboutImg = "/img/logo.png"
