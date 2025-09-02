@@ -24,22 +24,21 @@ export default function MainAbout() {
                 </h1>
             </motion.div>
             <div className={"flex flex-col gap-4 mt-10 p-4 lg:flex-row items-center justify-between"}>
-                {/* Right Image */}
+                {/* Left Image */}
                 <motion.div
-                    initial={{opacity: 0, x: 100}}
-                    animate={{
+                    initial={{opacity: 0, x: -100}}
+                    whileInView={{
                         opacity: 1,
                         x: 0,
                     }}
                     transition={{
-                        duration: 0.8,
-                        delay: 0.3,
-                        y: {
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }
+                        duration: 1,
+                        delay: 0.5,
+                        type: "spring",
+                        stiffness: 100,
+                        bounce: 0.8
                     }}
+                    viewport={{once: false, margin: "-100px"}}
                     className="w-full md:w-1/2 relative"
                 >
                     <div className="relative w-full aspect-square md:aspect-1">
@@ -55,6 +54,11 @@ export default function MainAbout() {
                             className="absolute inset-0 bg-green-700 rounded-lg -z-10"/>
                     </div>
                 </motion.div>
+
+                {/*right content*/}
+                <div>
+                    konten
+                </div>
             </div>
         </section>
     );
