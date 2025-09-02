@@ -24,8 +24,6 @@ export default function Navigation() {
         }
     },[])
 
-    console.log(heading)
-
     return (
         <>
             {/*large*/}
