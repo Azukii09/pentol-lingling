@@ -6,10 +6,14 @@ import {amatic_sc, poppins} from "@/lib/font/font";
 import {useTranslations} from "next-intl";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {useParams} from "next/navigation";
+import {aboutData} from "@/lib/data/content/aboutData";
 
 export default function MainAbout() {
     const width = useWindowWidth()
     const tAbout = useTranslations('About')
+    const params = useParams();
+    const data = aboutData.find((item) => item.locale === params.locale);
     return (
         <section className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
             <motion.div
@@ -58,20 +62,14 @@ export default function MainAbout() {
                 {/*right content*/}
                 <div className="w-full md:w-1/2 flex flex-col gap-4">
                     <div className={"flex flex-col gap-2"}>
-                        <p className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}>
-                            Pentol Ling Ling adalah brand kuliner yang lahir di Kepohbaru, Bojonegoro, Jawa Timur sejak
-                            Februari 2024. Selama 19 bulan perjalanan hingga kini, Pentol Ling Ling konsisten
-                            menghadirkan produk kuliner sehat tanpa bahan pengawet, dengan harga yang ramah dan cocok
-                            untuk segala usia. Berawal dari cita-cita sederhana untuk menjadi ikon kuliner Indonesia,
-                            Pentol Ling Ling membawa visi besar: menghadirkan usaha yang berkah dan barokah tanpa riba,
-                            sekaligus membuka peluang usaha bagi masyarakat luas melalui sistem agen dan reseller.
-                        </p>
-                        <p className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}>
-                            Dengan berbagai produk seperti pentol ayam, pentol sapi, dimsum siomay, tahu bakso, pangsit
-                            ayam, chili oil, hingga bumbu kuah bakso, Pentol Ling Ling telah dipercaya oleh café, resto,
-                            frozen food, sekolah, hingga berbagai event. Lebih dari sekadar produk kuliner, Pentol Ling
-                            Ling berkomitmen melahirkan pengusaha-pengusaha baru yang mampu bersaing di masa depan, menjaga inovasi, dan memberikan dampak positif bagi Indonesia.
-                        </p>
+                        {data?.data.aboutDescription.map((item, index) => (
+                            <p
+                                key={index}
+                                className={"text-justify indent-4 sm:indent-8 text-sm sm:text-base lg:text-lg leading-relaxed"}
+                            >
+                                {item}
+                            </p>
+                        ))}
                     </div>
                 </div>
             </div>
