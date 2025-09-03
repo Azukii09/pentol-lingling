@@ -22,6 +22,7 @@ export default function ProductCard({
                     fill
                     className={"object-cover transition-transform duration-300 hover:scale-110"}
                     sizes="(min-width: 1024px) 50vw, 100vw"
+                    priority
                 />
             </div>
             <h3 className="text-lg sm:text-xl md:text-2xl text-center font-semibold tracking-wider capitalize">{title}</h3>
