@@ -31,7 +31,7 @@ export default function MainProducts() {
 
 
             <motion.div
-                className={"grid grid-cols-2 gap-4 mt-10 md:grid-cols-3 lg:grid-cols-4"}
+                className={"grid grid-cols-2 gap-8 mt-10 md:grid-cols-3 lg:grid-cols-4"}
             >
                 {data?.data.map((item, index) => (
                     <motion.div

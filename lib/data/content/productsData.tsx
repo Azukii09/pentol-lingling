@@ -10,12 +10,12 @@ export const productsData = [
                 description: "Pentol ayam yang lezat terbuat dari daging ayam pilihan berkualitas tinggi dengan tekstur kenyal dan rasa yang autentik.",
             },
             {
-                img: "",
+                img: "/img/products/bumbu_kuah_bakso.png",
                 title: "Pentol sapi",
                 description: "Pentol sapi premium dengan daging sapi pilihan yang diproses dengan resep rahasia untuk menciptakan cita rasa yang khas.",
             },
             {
-                img: "",
+                img: "/img/products/dimsum_15_biji.png",
                 title: "Pentol mercon",
                 description: "Pentol dengan bumbu pedas special yang menggugah selera, cocok untuk pecinta makanan pedas dengan sensasi ledakan rasa.",
             },
@@ -56,12 +56,12 @@ export const productsData = [
                 description: "Delicious pentol made from high-quality selected chicken meat with chewy texture and authentic taste.",
             },
             {
-                img: "",
+                img: "/img/products/bumbu_kuah_bakso.png",
                 title: "Beef Pentol",
                 description: "Premium beef pentol made from selected beef processed with a secret recipe to create a distinctive taste.",
             },
             {
-                img: "",
+                img: "/img/products/dimsum_15_biji.png",
                 title: "Spicy Pentol",
                 description: "Pentol with special spicy seasoning that stimulates appetite, perfect for spicy food lovers with an explosive taste sensation.",
             },

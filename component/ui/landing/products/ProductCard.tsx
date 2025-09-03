@@ -12,16 +12,15 @@ export default function ProductCard({
 }) {
     return (
         <div className={"flex flex-col gap-4 items-center relative mb-12"}>
-            <div className={"relative w-full rounded-xl aspect-square drop-shadow-md drop-shadow-slate-500"}>
+            <div
+                className={"relative w-full rounded-xl aspect-square drop-shadow-xl drop-shadow-slate-500"}>
                 <Image
                     src={image || "/img/logo.png"}
                     alt={title}
                     fill
-                    className={"object-cover rounded-lg"}
-                    sizes="(min-width: 1024px) 50vw, 100vw" // <-- Add this line
+                    className={"object-cover rounded-lg transition-transform duration-300 hover:scale-110"}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
                 />
-                <div
-                    className="absolute inset-1 bg-rose-400 rounded-full -z-10"/>
             </div>
             <h3 className="text-xl sm:text-2xl md:text-3xl text-center font-semibold tracking-wider capitalize">{title}</h3>
             <p className="text-sm sm:text-base md:text-lg text-justify leading-relaxed mx-4 mb-8">{description}</p>
