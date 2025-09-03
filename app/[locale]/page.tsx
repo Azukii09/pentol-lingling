@@ -4,6 +4,7 @@ import PageSeparatedSection from "@/component/util/PageSeparatedSection";
 import MainProducts from "@/component/ui/landing/products/MainProducts";
 import ProductAdvantages from "@/component/ui/landing/products/ProductAdvantages";
 import {useTranslations} from "next-intl";
+import MainBusinessScheme from "@/component/ui/landing/BScheme/MainBusinessScheme";
 
 export default function HomePage() {
     const tTagline = useTranslations('Tagline')
@@ -27,9 +28,7 @@ export default function HomePage() {
             </PageSeparatedSection>
 
             {/*Business Scheme*/}
-            <section className={"bg-slate-200"}>
-                skema bisnis
-            </section>
+            <MainBusinessScheme/>
         </>
     )
 }
