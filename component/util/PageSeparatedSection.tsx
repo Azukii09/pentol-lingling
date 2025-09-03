@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 
 export default function PageSeparatedSection({
     text,
-    img
+    img,
+    children,
 }: {
     img: string,
-    text: string
+    text: string,
+    children?: React.ReactNode,
 }) {
     return (
         <motion.div
@@ -18,11 +20,11 @@ export default function PageSeparatedSection({
             viewport={{ once: true, amount: 0.3 }} // animasi hanya saat pertama kali masuk 30% viewport
             transition={{ duration: 1.5, ease: "easeOut" }}
         >
-            <div className={`flex flex-col relative w-full h-[50vh]`}>
+            <div className={`flex flex-col relative w-full min-h-[50vh]`}>
                 <div className={"z-20 w-full h-full bg-zinc-800/70 absolute"}></div>
                 <Image src={img} alt={"eiffel night"} className={"object-cover object-center w-full h-full"} fill/>
-                <div className={"absolute flex flex-col gap-8 justify-center items-center w-full h-full px-10 lg:px-26 z-30"}>
-                    <h2 className={"text-white text-md md:text-xl lg:text-2xl capitalize italic text-center font-semibold"}>{text}</h2>
+                <div className={`${!children && "px-10 lg:px-26"} absolute flex flex-col gap-8 justify-center items-center w-full h-full z-30`}>
+                    {children ? children : <h2 className={"text-white text-md md:text-xl lg:text-2xl capitalize italic text-center font-semibold"}>{text}</h2>}
                 </div>
             </div>
         </motion.div>

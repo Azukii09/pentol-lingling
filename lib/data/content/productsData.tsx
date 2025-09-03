@@ -289,3 +289,26 @@ export const productsData = [
         ]
     },
 ]
+
+export const productAdvantages = [
+    {
+        id:1,
+        locale:"id",
+        data:[
+            "Tanpa bahan pengawet & Cocok untuk segala usia.",
+            "Bisa dijual dalam bentuk matang atau frozen.",
+            "Harga terjangkau.",
+            "Margin Agen & Reseller 10% - 30%"
+        ]
+    },
+    {
+        id:2,
+        locale:"en",
+        data: [
+            "No preservatives & Suitable for all ages",
+            "Can be sold in cooked or frozen form",
+            "Affordable prices",
+            "Agent & Reseller margin 10% - 30%"
+        ]
+    },
+]
