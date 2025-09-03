@@ -12,11 +12,13 @@ export default function MainBusinessScheme() {
     const width = useWindowWidth()
     const tBScheme = useTranslations('BusinessScheme')
 
+    const tSchedule = useTranslations('Schedule')
+
     const params = useParams();
     const data = BusinessSchemeData.find((item) => item.locale === params.locale);
     return (
         <section className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
-            {/*title*/}
+            {/*title scheme*/}
             <motion.div
                 initial={{opacity: 0, y: -50}}
                 whileInView={{opacity: 1, y: 0}}
@@ -80,6 +82,22 @@ export default function MainBusinessScheme() {
                     ))}
                 </div>
             </div>
+
+            {/*title schedule*/}
+            <motion.div
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: false}}
+                transition={{duration: 0.8}}
+            >
+                <TitleArrow text={tSchedule('smallTitle')} size={width}/>
+                <h1 className={`${amatic_sc.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-semibold`}>
+                    {tSchedule('learnMore')} <span className={"text-rose-600"}>{tSchedule('smallTitle')}</span>
+                </h1>
+            </motion.div>
+
+            {/*content schedule*/}
+
         </section>
     );
 }

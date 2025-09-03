@@ -26,5 +26,9 @@
   "BusinessScheme": {
     "smallTitle": "Our Business Scheme",
     "learnMore": "Learn More About"
+  },
+  "Schedule": {
+    "smallTitle": "Our Delivery Schedule",
+    "learnMore": "Learn More About"
   }
 }

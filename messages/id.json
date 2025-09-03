@@ -26,5 +26,9 @@
   "BusinessScheme": {
     "smallTitle": "Skema Bisnis Kami",
     "learnMore": "Pelajari Lebih Lanjut Tentang"
+  },
+  "Schedule": {
+    "smallTitle": "Jadwal Pengiriman Kami",
+    "learnMore": "Pelajari Lebih Lanjut Tentang"
   }
 }
