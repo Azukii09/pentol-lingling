@@ -51,6 +51,7 @@ export default function MainProducts() {
                             image={item.img}
                             title={item.title}
                             description={item.description}
+                            qty={item.qty}
                         />
                     </motion.div>
                 ))}
