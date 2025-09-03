@@ -97,6 +97,9 @@ export default function MainBusinessScheme() {
             </motion.div>
 
             {/*content schedule*/}
+            <div>
+                <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>a</div>
+            </div>
 
         </section>
     );
