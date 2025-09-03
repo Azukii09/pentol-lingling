@@ -17,11 +17,11 @@ export default function MainProducts() {
     const data = productsData.find((item) => item.locale === params.locale);
 
     // Add state for visible items
-    const [visibleItems, setVisibleItems] = useState(8);
+    const [visibleItems, setVisibleItems] = useState(4);
 
     // Handle load more
     const handleLoadMore = () => {
-        setVisibleItems(prev => prev + 8);
+        setVisibleItems(prev => prev + 4);
     };
 
     return (
@@ -75,9 +75,10 @@ export default function MainProducts() {
                 >
                     <Button
                         buttonType={"button"}
-                        variant={"primary"}
+                        variant={"danger"}
                         buttonName={"load-more"}
                         buttonText={"Load More"}
+                        variantType={"solid-rounded"}
                         size={"sm"}
                         handler={() => handleLoadMore()}
                     />
