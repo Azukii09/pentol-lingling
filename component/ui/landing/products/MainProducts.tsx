@@ -3,14 +3,18 @@ import React from 'react';
 import TitleArrow from "@/component/util/TitleArrow";
 import useWindowWidth from "@/hook/useWindowWidth";
 import ProductCard from "@/component/ui/landing/products/ProductCard";
-import {dumyServices} from "@/lib/data/content/dumyServices";
 import {amatic_sc} from "@/lib/font/font";
 import {motion} from "framer-motion";
 import {useTranslations} from "next-intl";
+import {productsData} from "@/lib/data/content/productsData";
+import {useParams} from "next/navigation";
 
 export default function MainProducts() {
     const width = useWindowWidth()
     const tProduct = useTranslations('Product')
+
+    const params = useParams();
+    const data = productsData.find((item) => item.locale === params.locale);
     return (
         <section className={"w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary"}>
             <motion.div
@@ -29,7 +33,7 @@ export default function MainProducts() {
             <motion.div
                 className={"grid grid-cols-2 gap-4 mt-10 md:grid-cols-3 lg:grid-cols-4"}
             >
-                {dumyServices.map((item, index) => (
+                {data?.data.map((item, index) => (
                     <motion.div
                         key={index}
                         initial={{opacity: 0, y: -50}}
