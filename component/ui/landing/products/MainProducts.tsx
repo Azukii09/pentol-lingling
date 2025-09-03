@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useState} from 'react';
 import TitleArrow from "@/component/util/TitleArrow";
 import useWindowWidth from "@/hook/useWindowWidth";
 import ProductCard from "@/component/ui/landing/products/ProductCard";
@@ -8,13 +8,22 @@ import {motion} from "framer-motion";
 import {useTranslations} from "next-intl";
 import {productsData} from "@/lib/data/content/productsData";
 import {useParams} from "next/navigation";
+import Button from "@/component/util/Button";
 
 export default function MainProducts() {
     const width = useWindowWidth()
     const tProduct = useTranslations('Product')
-
     const params = useParams();
     const data = productsData.find((item) => item.locale === params.locale);
+
+    // Add state for visible items
+    const [visibleItems, setVisibleItems] = useState(8);
+
+    // Handle load more
+    const handleLoadMore = () => {
+        setVisibleItems(prev => prev + 8);
+    };
+
     return (
         <section className={"w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary"}>
             <motion.div
@@ -29,11 +38,10 @@ export default function MainProducts() {
                 </h1>
             </motion.div>
 
-
             <motion.div
                 className={"grid grid-cols-2 gap-8 mt-10 md:grid-cols-3 lg:grid-cols-4"}
             >
-                {data?.data.map((item, index) => (
+                {data?.data.slice(0, visibleItems).map((item, index) => (
                     <motion.div
                         key={index}
                         initial={{opacity: 0, y: -50}}
@@ -41,7 +49,7 @@ export default function MainProducts() {
                         viewport={{once: false, margin: "-100px"}}
                         transition={{
                             duration: 0.5,
-                            delay: index * 0.2,
+                            delay: (index % 8) * 0.2, // Reset delay for each new batch
                             type: "spring",
                             bounce: 0.4,
                             stiffness: 70
@@ -56,6 +64,25 @@ export default function MainProducts() {
                     </motion.div>
                 ))}
             </motion.div>
+
+            {/* Load More Button */}
+            {data?.data &&  data?.data.length> visibleItems && (
+                <motion.div
+                    className="flex justify-center mt-8"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 0.5}}
+                >
+                    <Button
+                        buttonType={"button"}
+                        variant={"primary"}
+                        buttonName={"load-more"}
+                        buttonText={"Load More"}
+                        size={"sm"}
+                        handler={() => handleLoadMore()}
+                    />
+                </motion.div>
+            )}
         </section>
     );
 }
