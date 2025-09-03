@@ -10,6 +10,7 @@ export default function HomePage() {
             <MainAbout/>
             <PageSeparatedSection text={"our services"} img={"/img/separator/separator-1.jpg"}/>
             <MainProducts/>
+            <PageSeparatedSection text={"our services"} img={"/img/separator/separator-2.jpg"}/>
         </>
     )
 }
