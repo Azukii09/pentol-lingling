@@ -19,5 +19,8 @@
   "Product": {
     "product": "Our Product",
     "learnMore": "Learn More About"
+  },
+  "Tagline": {
+    "text": "Blessed Taste, Affordable Price."
   }
 }
