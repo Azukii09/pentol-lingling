@@ -9,13 +9,27 @@ export default function HomePage() {
     const tTagline = useTranslations('Tagline')
     return(
         <>
+            {/*hero*/}
             <Hero/>
+
+            {/*about*/}
             <MainAbout/>
+
+            {/*separator*/}
             <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-1.jpg"}/>
+
+            {/*products*/}
             <MainProducts/>
+
+            {/*separator*/}
             <PageSeparatedSection text={"our services"} img={"/img/separator/separator-2.jpg"}>
                 <ProductAdvantages/>
             </PageSeparatedSection>
+
+            {/*Business Scheme*/}
+            <section className={"bg-slate-200"}>
+                skema bisnis
+            </section>
         </>
     )
 }
