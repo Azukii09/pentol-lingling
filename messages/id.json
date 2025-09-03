@@ -15,5 +15,9 @@
   "About": {
     "about": "Tentang Kami",
     "learnMore": "Pelajari Lebih Lanjut"
+  },
+  "Product": {
+    "product": "Produk Kami",
+    "learnMore": "Pelajari Lebih Lanjut Tentang"
   }
 }

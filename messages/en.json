@@ -15,5 +15,9 @@
   "About": {
     "about": "About Us",
     "learnMore": "Learn More"
+  },
+  "Product": {
+    "product": "Our Product",
+    "learnMore": "Learn More About"
   }
 }
