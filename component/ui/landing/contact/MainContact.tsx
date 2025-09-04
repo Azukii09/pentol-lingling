@@ -7,6 +7,7 @@ import {useTranslations} from "next-intl";
 import { motion } from "framer-motion";
 import {useParams} from "next/navigation";
 import {aboutData} from "@/lib/data/content/aboutData";
+import ContactUs from "@/component/ui/landing/contact/ContactUs";
 
 export default function MainContact() {
     const width = useWindowWidth()
@@ -26,6 +27,8 @@ export default function MainContact() {
                 {tAbout('learnMore')} <span className={"text-rose-600"}>{tAbout('about')}</span>
                 </h1>
             </motion.div>
+
+            <ContactUs/>
         </section>
     );
 }
