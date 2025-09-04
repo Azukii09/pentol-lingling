@@ -5,7 +5,7 @@ import {VerticalNavigationProps} from "@/lib/type/navigation";
 import {BsFillExclamationCircleFill} from "react-icons/bs";
 import {AiOutlineProduct} from "react-icons/ai";
 import {MdSchema} from "react-icons/md";
-import {FaPhone, FaUsers} from "react-icons/fa";
+import {FaPhone} from "react-icons/fa";
 
 
 export const landingNavigationData :{
@@ -37,11 +37,11 @@ export const landingNavigationData :{
                 link:"#scheme",
                 icon:<MdSchema className={"size-4"}/>,
             },
-            {
-                name:"Our Teams",
-                link:"#teams",
-                icon:<FaUsers className={"size-4"}/>,
-            },
+            // {
+            //     name:"Our Teams",
+            //     link:"#teams",
+            //     icon:<FaUsers className={"size-4"}/>,
+            // },
             {
                 name:"Contact Us",
                 link:"#contact",
@@ -73,11 +73,11 @@ export const landingNavigationData :{
                 link: "#scheme",
                 icon: <MdSchema className={"size-4"}/>,
             },
-            {
-                name: "Tim Kami",
-                link: "#teams",
-                icon: <FaUsers className={"size-4"}/>,
-            },
+            // {
+            //     name: "Tim Kami",
+            //     link: "#teams",
+            //     icon: <FaUsers className={"size-4"}/>,
+            // },
             {
                 name: "Hubungi Kami",
                 link: "#contact",
