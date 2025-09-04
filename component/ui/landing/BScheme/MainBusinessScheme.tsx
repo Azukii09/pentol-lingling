@@ -6,7 +6,7 @@ import TitleArrow from "@/component/util/TitleArrow";
 import useWindowWidth from "@/hook/useWindowWidth";
 import {useTranslations} from "next-intl";
 import {useParams} from "next/navigation";
-import {BusinessSchemeData} from "@/lib/data/content/BusinessScheme";
+import {BusinessSchemeData, DeliverySchedule} from "@/lib/data/content/BusinessScheme";
 
 export default function MainBusinessScheme() {
     const width = useWindowWidth()
@@ -16,6 +16,8 @@ export default function MainBusinessScheme() {
 
     const params = useParams();
     const data = BusinessSchemeData.find((item) => item.locale === params.locale);
+
+    const dataSchedule = DeliverySchedule.find((item) => item.locale === params.locale);
     return (
         <section id={"scheme"} className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
             {/*title scheme*/}
@@ -97,8 +99,56 @@ export default function MainBusinessScheme() {
             </motion.div>
 
             {/*content schedule*/}
-            <div>
-                <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>a</div>
+            <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>
+                <div className={"grid grid-cols-1 gap-6 lg:grid-cols-5 lg:items-stretch items-center justify-between"}>
+                    {dataSchedule?.data.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{opacity: 0, x: -100}}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0,
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                                cursor: 'pointer'
+                            }}
+                            viewport={{once: false, margin: "-100px"}}
+                            transition={{
+                                duration: 0.8,
+                                type: "spring",
+                                bounce: 0.4,
+                                stiffness: 70
+                            }}
+                            className={`bg-rose-500 text-white font-semibold w-full  flex flex-col gap-4 justify-between items-center p-8 shadow-lg shadow-slate-500 rounded-2xl`}
+                        >
+                            <motion.h1
+                                initial={{opacity: 0, y: -20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: false}}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.2
+                                }}
+                                className={`${amatic_sc.className} text-4xl`}
+                            >
+                                {item.city}
+                            </motion.h1>
+                            <motion.p
+                                initial={{opacity: 0, y: 20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: false}}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.4
+                                }}
+                                className={"text-justify"}
+                            >
+                                {item.day}
+                            </motion.p>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
 
         </section>

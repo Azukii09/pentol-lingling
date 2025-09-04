@@ -57,3 +57,98 @@ export const BusinessSchemeData = [
         ]
     }
 ]
+
+export const DeliverySchedule = [
+    {
+        id:1,
+        locale:"id",
+        data:[
+            {
+                city:"Bojonegoro",
+                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Lamongan",
+                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Tuban",
+                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Gresik",
+                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Surabaya",
+                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Sidoarjo",
+                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
+            },
+            {
+                city:"Jember",
+                day:"Menyesuaikan jadwal Expedisi & Kalog",
+            },
+            {
+                city:"Madura",
+                day:"Menyesuaikan jadwal Expedisi & Kalog",
+            },
+            {
+                city:"Kalimantan Timur",
+                day:"Menyesuaikan jadwal Expedisi & Kalog",
+            },
+            {
+                city:"Jawa Barat",
+                day:"Menyesuaikan jadwal Expedisi & Kalog",
+            },
+        ]
+    },
+    {
+        id:2,
+        locale:"en",
+        data: [
+            {
+                city: "Bojonegoro",
+                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+            },
+            {
+                city: "Lamongan",
+                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+            },
+            {
+                city: "Tuban",
+                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+            },
+            {
+                city: "Gresik",
+                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
+            },
+            {
+                city: "Surabaya",
+                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
+            },
+            {
+                city: "Sidoarjo",
+                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
+            },
+            {
+                city: "Jember",
+                day: "Adjusting to Expedition & Kalog schedule",
+            },
+            {
+                city: "Madura",
+                day: "Adjusting to Expedition & Kalog schedule",
+            },
+            {
+                city: "East Kalimantan",
+                day: "Adjusting to Expedition & Kalog schedule",
+            },
+            {
+                city: "West Java",
+                day: "Adjusting to Expedition & Kalog schedule",
+            },
+        ]
+    }
+]
