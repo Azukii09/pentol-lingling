@@ -1,10 +1,11 @@
 import {
-    HiAdjustmentsHorizontal, HiBars3,
     HiHome,
 } from "react-icons/hi2";
-import {GoDotFill} from "react-icons/go";
 import {VerticalNavigationProps} from "@/lib/type/navigation";
-import {PiArticleNyTimes} from "react-icons/pi";
+import {BsFillExclamationCircleFill} from "react-icons/bs";
+import {AiOutlineProduct} from "react-icons/ai";
+import {MdSchema} from "react-icons/md";
+import {FaPhone, FaUsers} from "react-icons/fa";
 
 
 export const landingNavigationData :{
@@ -18,83 +19,33 @@ export const landingNavigationData :{
         navigation:[
             {
                 name:"Home",
-                link:"/",
+                link:"#home",
                 icon:<HiHome className={"size-4"}/>,
             },
             {
-                name:"About",
-                link:"/about",
-                icon:<HiAdjustmentsHorizontal className={"size-4"}/>,
+                name:"About Us",
+                link:"#about",
+                icon:<BsFillExclamationCircleFill className={"size-4"}/>,
             },
             {
-                name:"Articles",
-                link:"/articles",
-                icon:<PiArticleNyTimes className={"size-4"}/>,
+                name:"Products",
+                link:"#product",
+                icon:<AiOutlineProduct className={"size-4"}/>,
             },
             {
-                name:"Level 1",
-                link:"/menu",
-                icon:<HiBars3 className={"size-4"}/>,
-                navigation:[
-                    {
-                        name:"Level 2a",
-                        link:"/menu/level-1/level-2a",
-                        icon:<GoDotFill className={"size-2"}/>,
-                        navigation:[
-                            {
-                                name:"Level 3a",
-                                link:"/menu/level-1/level-2a/level-3a",
-                                icon:<GoDotFill className={"size-2"}/>,
-                                navigation:[
-                                    {
-                                        name:"Level 4a",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4a",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    },
-                                    {
-                                        name:"Level 4b",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4b",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    }
-                                ]
-                            },
-                            {
-                                name:"Level 3b",
-                                link:"/menu/level-1/level-2a/level-3b",
-                                icon:<GoDotFill className={"size-2"}/>,
-                            }
-                        ]
-                    },
-                    {
-                        name:"Level 2b",
-                        link:"/menu/level-1/level-2b",
-                        icon:<GoDotFill className={"size-2"}/>,
-                        navigation:[
-                            {
-                                name:"Level 3a",
-                                link:"/menu/level-1/level-2a/level-3a",
-                                icon:<GoDotFill className={"size-2"}/>,
-                                navigation:[
-                                    {
-                                        name:"Level 4a",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4a",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    },
-                                    {
-                                        name:"Level 4b",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4b",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    }
-                                ]
-                            },
-                            {
-                                name:"Level 3b",
-                                link:"/menu/level-1/level-2a/level-3b",
-                                icon:<GoDotFill className={"size-2"}/>,
-                            }
-                        ]
-                    },
-                ]
+                name:"Business Scheme",
+                link:"#scheme",
+                icon:<MdSchema className={"size-4"}/>,
+            },
+            {
+                name:"Our Teams",
+                link:"#teams",
+                icon:<FaUsers className={"size-4"}/>,
+            },
+            {
+                name:"Contact Us",
+                link:"#contact",
+                icon:<FaPhone className={"size-4"}/>,
             },
         ]
     },
@@ -103,55 +54,34 @@ export const landingNavigationData :{
         locale:"id",
         navigation:[
             {
-                name:"Beranda",
-                link:"/",
-                icon:<HiHome className={"size-4"}/>,
+                name: "Beranda",
+                link: "#home",
+                icon: <HiHome className={"size-4"}/>,
             },
             {
-                name:"Tentang",
-                link:"/about",
-                icon:<HiAdjustmentsHorizontal className={"size-4"}/>,
+                name: "Tentang Kami",
+                link: "#about",
+                icon: <BsFillExclamationCircleFill className={"size-4"}/>,
             },
             {
-                name:"Artikel",
-                link:"/articles",
-                icon:<PiArticleNyTimes className={"size-4"}/>,
+                name: "Produk",
+                link: "#product",
+                icon: <AiOutlineProduct className={"size-4"}/>,
             },
             {
-                name:"Level 1",
-                link:"/menu",
-                icon:<HiBars3 className={"size-4"}/>,
-                navigation:[
-                    {
-                        name:"Level 2a",
-                        link:"/menu/level-1/level-2a",
-                        icon:<GoDotFill className={"size-2"}/>,
-                        navigation:[
-                            {
-                                name:"Level 3a",
-                                link:"/menu/level-1/level-2a/level-3a",
-                                icon:<GoDotFill className={"size-2"}/>,
-                                navigation:[
-                                    {
-                                        name:"Level 4a",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4a",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    },
-                                    {
-                                        name:"Level 4b",
-                                        link:"/menu/level-1/level-2a/level-3a/level-4b",
-                                        icon:<GoDotFill className={"size-2"}/>,
-                                    }
-                                ]
-                            },
-                            {
-                                name:"Level 3b",
-                                link:"/menu/level-1/level-2a/level-3b",
-                                icon:<GoDotFill className={"size-2"}/>,
-                            }
-                        ]
-                    },
-                ]
+                name: "Skema Bisnis",
+                link: "#scheme",
+                icon: <MdSchema className={"size-4"}/>,
+            },
+            {
+                name: "Tim Kami",
+                link: "#teams",
+                icon: <FaUsers className={"size-4"}/>,
+            },
+            {
+                name: "Hubungi Kami",
+                link: "#contact",
+                icon: <FaPhone className={"size-4"}/>,
             },
         ]
     },
