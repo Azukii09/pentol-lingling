@@ -17,7 +17,7 @@ export default function MainBusinessScheme() {
     const params = useParams();
     const data = BusinessSchemeData.find((item) => item.locale === params.locale);
     return (
-        <section className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
+        <section id={"scheme"} className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
             {/*title scheme*/}
             <motion.div
                 initial={{opacity: 0, y: -50}}

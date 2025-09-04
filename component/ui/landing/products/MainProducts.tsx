@@ -25,7 +25,7 @@ export default function MainProducts() {
     };
 
     return (
-        <section className={"w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary"}>
+        <section id={"product"} className={"w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary"}>
             <motion.div
                 initial={{opacity: 0, y: -50}}
                 whileInView={{opacity: 1, y: 0}}

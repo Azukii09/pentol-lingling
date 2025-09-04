@@ -15,7 +15,7 @@ export default function MainAbout() {
     const params = useParams();
     const data = aboutData.find((item) => item.locale === params.locale);
     return (
-        <section className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
+        <section id={"about"} className={`${poppins.className} w-full global-padding mx-auto py-6 min-h-[calc(100vh-80px)] text-quaternary`}>
             <motion.div
                 initial={{opacity: 0, y: -50}}
                 whileInView={{opacity: 1, y: 0}}

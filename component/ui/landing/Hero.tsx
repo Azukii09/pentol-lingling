@@ -9,7 +9,7 @@ import {useTranslations} from "next-intl";
 export default function Hero() {
     const tHero = useTranslations('Hero')
     return (
-        <section className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-300 via-primary/45 to-slate-300 text-white -z-10`}>
+        <section id={"home"} className={`${roboto.className} relative py-10 md:py-28 overflow-hidden min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-300 via-primary/45 to-slate-300 text-white -z-10`}>
             <div className="container mx-auto px-4 md:px-10">
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
                     {/* Left Content */}

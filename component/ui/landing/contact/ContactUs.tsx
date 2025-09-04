@@ -41,7 +41,6 @@ Terima kasih, dan mohon bantuan Anda.`;
 
     return (
         <motion.div
-            id="contact"
             className="global-padding py-20 flex flex-col gap-8 text-quaternary"
             initial={{opacity: 0, y: 40}}
             whileInView={{opacity: 1, y: 0}}

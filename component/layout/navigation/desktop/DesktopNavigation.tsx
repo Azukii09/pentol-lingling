@@ -1,26 +1,83 @@
-import React from 'react';
-import Link from "next/link";
-import {useParams, usePathname} from "next/navigation";
+import React, {useEffect, useState} from 'react';
+import {useParams} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
 import HorizontalNavigationContent from "@/component/layout/navigation/part/HorizontalNavigationContent";
 import { poppins} from "@/lib/font/font";
 
 export default function DesktopNavigation() {
-    const router = usePathname();
     const params = useParams();
     const dataNavigation =  landingNavigationData.find((item) => item.locale === params.locale);
+
+
+    const [hash, setHash] = useState<string>("#hero");
+    const navLinks = (dataNavigation?.navigation ?? []).filter(item => item.link.startsWith('#'));
+
+    // Helper: Update hash by scrolling
+    useEffect(() => {
+        // Handler for scroll event:
+        const handleScroll = () => {
+            let found = false;
+            for (let i = 0; i < navLinks.length; i++) {
+                const id = navLinks[i].link.replace('#', '');
+                const el = document.getElementById(id);
+                if (el) {
+                    // Get bounding rect
+                    const rect = el.getBoundingClientRect();
+                    // Menentukan apakah elemen sudah melewati batas atas viewport (misal 100px dari atas)
+                    if (rect.top <= 100 && rect.bottom > 100) {
+                        // Section "masuk utama" di area viewport
+                        setHash(`#${id}`);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            // Jika di paling atas (misal user scroll ke atas sekali), pastikan hash update
+            if (!found && navLinks.length > 0 && window.scrollY < 100) {
+                setHash(navLinks[0].link);
+            }
+        };
+
+        // Handler for hash change with manual navigation (browser controls)
+        const handleHashChange = () => {
+            setHash(window.location.hash);
+        };
+
+        window.addEventListener("scroll", handleScroll, {passive: true});
+        window.addEventListener("hashchange", handleHashChange);
+
+        // Initial check
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("hashchange", handleHashChange);
+        };
+    }, [dataNavigation?.navigation, navLinks]); // Rerun jika dataSidebar berubah
+
+    // Handler untuk klik pada link, hanya update hash secara manual & scroll smooth
+    const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, itemLink: string) => {
+        e.preventDefault();
+        const el = document.getElementById(itemLink.substring(1));
+        if (el) {
+            el.scrollIntoView({behavior: 'smooth'});
+            window.history.pushState(null, "", itemLink); // Ubah URL tanpa reload
+            setHash(itemLink); // Pastikan state juga update
+        }
+    };
     return (
         <div className={`${poppins.className} flex gap-4`}>
             {dataNavigation?.navigation?.map((item,index) => {
-                const activeLink = (router.endsWith(item.link));
+                const activeLink = (item.link === hash);
+
                 return(
                     item.navigation && item.navigation.length ?
                         <div className={"group cursor-pointer"}
                         key={index}>
                             <div
                                 className={`
-                                ${router.includes(item.link) ? "text-primary rounded-md hover:text-primary":"hover:text-primary"} 
-                                ${router.includes(item.link)
+                                ${activeLink ? "text-primary rounded-md hover:text-primary":"hover:text-primary"} 
+                                ${activeLink
                                     ? " lg:after:scale-x-100 lg:hover:after:scale-x-0"
                                     : " lg:after:scale-x-0 lg:hover:after:scale-x-100"
                                 }
@@ -39,7 +96,7 @@ export default function DesktopNavigation() {
                             </div>
                         </div>
                         :
-                        <Link
+                        <a
                             key={index}
                             href={item.link}
                             className={`
@@ -51,9 +108,12 @@ export default function DesktopNavigation() {
                                 relative inline-flex items-center justify-between font-semibold text-base px-3 py-1 
                                 lg:after:origin-left lg:px-0 lg:mx-3 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-[2px] lg:after:w-full lg:after:bg-primary lg:after:transition-transform lg:after:duration-400 lg:after:transform
                             `}
+                            onClick={item.link.startsWith('#')
+                                ? (e) => handleHashClick(e, item.link)
+                                : undefined}
                         >
                             {item.name}
-                        </Link>
+                        </a>
                 )})}
         </div>
     );
