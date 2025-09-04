@@ -24,14 +24,16 @@ function ContactUs() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const pesan =
-            `Halo Admin, saya ingin menghubungi Anda untuk konsultasi pengiriman.
+            `Halo Admin, saya ingin menghubungi Anda untuk konsultasi mengenai produk dari pentol ling ling.
 
 Nama Depan: ${form.firstName}
 Nama Belakang: ${form.lastName}
 Email: ${form.email}
 Telepon: ${form.phone}
 Alamat: ${form.alamat}
-Catatan: ${form.catatan}`;
+Catatan: ${form.catatan}
+
+Terima kasih, dan mohon bantuan Anda.`;
 
         const waUrl = `${social.whatsapp}?text=${encodeURIComponent(pesan)}`;
         window.open(waUrl, "_blank");
@@ -40,7 +42,7 @@ Catatan: ${form.catatan}`;
     return (
         <motion.div
             id="contact"
-            className="global-padding py-20 flex flex-col gap-8 text-wording"
+            className="global-padding py-20 flex flex-col gap-8 text-quaternary"
             initial={{opacity: 0, y: 40}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: false, amount: 0.35}}
@@ -48,7 +50,7 @@ Catatan: ${form.catatan}`;
         >
             <div className="flex flex-col gap-16">
                 <motion.div
-                    className="flex flex-col lg:flex-row bg-white w-full rounded-lg shadow-lg shadow-slate-500"
+                    className="flex flex-col lg:flex-row bg-white w-full rounded-lg shadow-md shadow-slate-500"
                     initial={{}}
                     whileInView={{
                         transition: {
@@ -182,7 +184,7 @@ Catatan: ${form.catatan}`;
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="flex flex-col p-6 w-full items-center justify-center bg-primary text-wording-white rounded-lg gap-2"
+                                className="flex flex-col p-6 w-full items-center justify-center bg-rose-500 text-white rounded-lg gap-2"
                                 initial={{opacity: 0, y: -60}}
                                 whileInView={{opacity: 1, y: 0}}
                                 transition={{duration: 0.6, ease: "easeOut"}}
