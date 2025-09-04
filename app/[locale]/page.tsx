@@ -29,6 +29,9 @@ export default function HomePage() {
 
             {/*Business Scheme*/}
             <MainBusinessScheme/>
+
+            {/*separator*/}
+            <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-3.jpg"}/>
         </>
     )
 }
