@@ -5,6 +5,7 @@ import MainProducts from "@/component/ui/landing/products/MainProducts";
 import ProductAdvantages from "@/component/ui/landing/products/ProductAdvantages";
 import {useTranslations} from "next-intl";
 import MainBusinessScheme from "@/component/ui/landing/BScheme/MainBusinessScheme";
+import MainContact from "@/component/ui/landing/contact/MainContact";
 
 export default function HomePage() {
     const tTagline = useTranslations('Tagline')
@@ -32,6 +33,8 @@ export default function HomePage() {
 
             {/*separator*/}
             <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-3.jpg"}/>
+
+            <MainContact/>
         </>
     )
 }
