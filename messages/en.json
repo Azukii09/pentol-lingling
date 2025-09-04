@@ -30,5 +30,9 @@
   "Schedule": {
     "smallTitle": "Our Delivery Schedule",
     "learnMore": "Learn More About"
+  },
+  "Contact": {
+    "smallTitle": "Contact Us",
+    "learnMore": "Schedule a Consultation with"
   }
 }
