@@ -100,7 +100,7 @@ export default function MainBusinessScheme() {
 
             {/*content schedule*/}
             <div className={"flex flex-col gap-8 mt-2 p-4 lg:flex-row items-center justify-between"}>
-                <div className={"grid grid-cols-1 gap-6 lg:grid-cols-5 lg:items-stretch items-center justify-between"}>
+                <div className={"grid grid-cols-1 gap-6 lg:grid-cols-3 lg:items-stretch items-center"}>
                     {dataSchedule?.data.map((item, index) => (
                         <motion.div
                             key={index}
