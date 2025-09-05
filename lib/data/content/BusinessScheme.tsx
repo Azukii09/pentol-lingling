@@ -64,44 +64,28 @@ export const DeliverySchedule = [
         locale:"id",
         data:[
             {
-                city:"Bojonegoro",
-                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+                city:"Tuban, Lamongan, dan gresik",
+                day:"Hari Senin dan Jumat, (jadwal dapat berubah sewaktu-waktu).",
             },
             {
-                city:"Lamongan",
-                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+                city:"Bojonegoro dan Cepu",
+                day:"Hari Kamis, (jadwal dapat berubah sewaktu-waktu).",
             },
             {
-                city:"Tuban",
-                day:"Hari Senin , Rabu & Jumat (jadwal dapat berubah sewaktu-waktu)",
+                city:"Surabaya, Sidoarjo, dan Madura",
+                day:"Hari Selasa dan Sabtu, (jadwal dapat berubah sewaktu-waktu).",
             },
             {
-                city:"Gresik",
-                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
+                city:"Jember dan Pasuruan",
+                day:"Hari Rabu, (jadwal dapat berubah sewaktu-waktu)",
             },
             {
-                city:"Surabaya",
-                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
-            },
-            {
-                city:"Sidoarjo",
-                day:"Hari Selasa, Kamis, Sabtu (jadwal dapat berubah sewaktu-waktu)",
-            },
-            {
-                city:"Jember",
-                day:"Menyesuaikan jadwal Expedisi & Kalog",
-            },
-            {
-                city:"Madura",
-                day:"Menyesuaikan jadwal Expedisi & Kalog",
-            },
-            {
-                city:"Kalimantan Timur",
-                day:"Menyesuaikan jadwal Expedisi & Kalog",
+                city:"Kalimantan",
+                day:"Menyesuaikan Jadwal Kapal Laut.",
             },
             {
                 city:"Jawa Barat",
-                day:"Menyesuaikan jadwal Expedisi & Kalog",
+                day:"Setiap Hari Kecuali tangal merah dan hari libur.",
             },
         ]
     },
@@ -110,44 +94,28 @@ export const DeliverySchedule = [
         locale:"en",
         data: [
             {
-                city: "Bojonegoro",
-                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+                city: "Tuban, Lamongan, and Gresik",
+                day: "Monday and Friday, (schedule subject to change).",
             },
             {
-                city: "Lamongan",
-                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+                city: "Bojonegoro and Cepu",
+                day: "Thursday, (schedule subject to change).",
             },
             {
-                city: "Tuban",
-                day: "Monday, Wednesday & Friday (schedule may change at any time)",
+                city: "Surabaya, Sidoarjo, and Madura",
+                day: "Tuesday and Saturday, (schedule subject to change).",
             },
             {
-                city: "Gresik",
-                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
+                city: "Jember and Pasuruan",
+                day: "Wednesday, (schedule subject to change)",
             },
             {
-                city: "Surabaya",
-                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
-            },
-            {
-                city: "Sidoarjo",
-                day: "Tuesday, Thursday, Saturday (schedule may change at any time)",
-            },
-            {
-                city: "Jember",
-                day: "Adjusting to Expedition & Kalog schedule",
-            },
-            {
-                city: "Madura",
-                day: "Adjusting to Expedition & Kalog schedule",
-            },
-            {
-                city: "East Kalimantan",
-                day: "Adjusting to Expedition & Kalog schedule",
+                city: "Kalimantan",
+                day: "According to Ship Schedule.",
             },
             {
                 city: "West Java",
-                day: "Adjusting to Expedition & Kalog schedule",
+                day: "Every Day Except public holidays.",
             },
         ]
     }
