@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from 'react';
-import {FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa6";
+import {FaFacebook, FaInstagram, FaTiktok, FaWhatsapp} from "react-icons/fa6";
 import {HiEnvelope, HiMap, HiPhone} from "react-icons/hi2";
 import {address, email, phone, social} from "@/lib/data/content/companyData";
 import Link from "next/link";
@@ -167,14 +167,17 @@ Terima kasih, dan mohon bantuan Anda.`;
                             {
                                 icon: (
                                     <div className="flex gap-2">
-                                        <Link href={social.instagram} className="cursor-pointer">
+                                        <Link href={social.instagram} className="cursor-pointer" target={"_blank"}>
                                             <FaInstagram className="size-8"/>
                                         </Link>
-                                        <Link href={social.whatsapp} className="cursor-pointer">
+                                        <Link href={social.whatsapp} className="cursor-pointer" target={"_blank"}>
                                             <FaWhatsapp className="size-8"/>
                                         </Link>
-                                        <Link href={social.linkedin} className="cursor-pointer">
-                                            <FaLinkedinIn className="size-8"/>
+                                        <Link href={social.facebook} className="cursor-pointer" target={"_blank"}>
+                                            <FaFacebook className={"size-6"} />
+                                        </Link>
+                                        <Link href={social.tiktok} className="cursor-pointer" target={"_blank"}>
+                                            <FaTiktok className={"size-6"} />
                                         </Link>
                                     </div>
                                 ),
