@@ -10,7 +10,7 @@ export const BusinessSchemeData = [
             {
                 icon:<MdPointOfSale className={"size-12"}/>,
                 title:"Penjualan",
-                description:"Penjualan kami banyak melalui: Café & Resto, Frozen Food, Bakso, Sekolah, Ivent, dll.",
+                description:"Penjualan kami banyak melalui Agen & Reseller , Frozen Food , Bakso , Pentol Rombong, Dapur Gizi, Ivent, dll.",
             },
             {
                 icon:<CiDeliveryTruck className={"size-12"}/>,
@@ -37,7 +37,7 @@ export const BusinessSchemeData = [
             {
                 icon: <MdPointOfSale className={"size-12"}/>,
                 title: "Sales",
-                description: "Our sales channels include: Cafés & Restaurants, Frozen Food, Meatballs, Schools, Events, etc.",
+                description: "Our sales are primarily through Agents & Resellers, Frozen Food, Meatballs, Street Food Carts, Nutrition Kitchen, Events, etc.",
             },
             {
                 icon: <CiDeliveryTruck className={"size-12"}/>,
