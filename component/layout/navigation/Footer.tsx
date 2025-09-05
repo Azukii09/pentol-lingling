@@ -1,14 +1,15 @@
 'use client'
 import React from 'react';
-import {address, companyName, email, phone} from "@/lib/data/content/companyData";
+import {address, companyName, email, phone, social} from "@/lib/data/content/companyData";
 import {HiEnvelope} from "react-icons/hi2";
 import {HiMap, HiPhone} from "react-icons/hi";
-import {FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
+import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {useParams} from "next/navigation";
 import {landingNavigationData} from "@/lib/data/navigation/landing_navigation";
 import {useTranslations} from "next-intl";
 import Link from "next/link";
 import Logo from "@/component/util/Logo";
+import {FaFacebook, FaTiktok} from "react-icons/fa6";
 
 export default function Footer() {
     const params = useParams();
@@ -82,13 +83,24 @@ export default function Footer() {
                         <h2 className={" font-bold text-md"}>Sosial Media</h2>
                         <div className={"flex gap-4"}>
                             <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
-                                <FaWhatsapp className={"size-6"} />
+                                <Link href={social.whatsapp} target={"_blank"}>
+                                    <FaWhatsapp className={"size-6"} />
+                                </Link>
                             </div>
                             <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
-                                <FaInstagram className={"size-6"} />
+                                <Link href={social.instagram} target={"_blank"}>
+                                    <FaInstagram className={"size-6"} />
+                                </Link>
                             </div>
                             <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
-                                <FaLinkedinIn className={"size-6"} />
+                                <Link href={social.facebook} target={"_blank"}>
+                                    <FaFacebook className={"size-6"} />
+                                </Link>
+                            </div>
+                            <div className={"bg-zinc-200 text-rose-600 lg:text-main size-8 rounded-md p-1"}>
+                                <Link href={social.tiktok} target={"_blank"}>
+                                    <FaTiktok className={"size-6"} />
+                                </Link>
                             </div>
                         </div>
                     </div>
