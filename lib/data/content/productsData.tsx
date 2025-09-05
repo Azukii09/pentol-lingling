@@ -5,24 +5,6 @@ export const productsData = [
         locale:"id",
         data: [
             {
-                img: "/img/products/bumbu_kuah_bakso.png",
-                title: "Bumbu Kuah Bakso",
-                description: "Paduan rempah dan bumbu pilihan berkualitas yang menghasilkan kuah bakso dengan cita rasa khas yang lezat.",
-                qty:"1 Bungkus untuk 5-8 Liter Air",
-            },
-            {
-                img: "/img/products/co_botol_100gr.png",
-                title: "Chili Oil Botol",
-                description: "Minyak cabai premium dengan perpaduan rempah pilihan yang memberikan sensasi pedas gurih pada berbagai hidangan.",
-                qty: "100 Gram",
-            },
-            {
-                img: "/img/products/co_saset.png",
-                title: "Chili Oil Sachet",
-                description: "Minyak cabai premium dengan perpaduan rempah pilihan yang memberikan sensasi pedas gurih pada berbagai hidangan.",
-                qty:"40 Gram",
-            },
-            {
                 img: "/img/products/dimsum_15_biji.png",
                 title: "Dimsum Isi 15 Biji",
                 description: "Dimsum lezat berisi daging dan sayuran pilihan dalam kemasan praktis berisi 15 biji.",
@@ -113,18 +95,6 @@ export const productsData = [
                 qty: "100 Biji",
             },
             {
-                img: "/img/products/pntl_tenis_halus_9bj.png",
-                title: "pentol tenis halus",
-                description: "Pentol tenis halus yang gurih berkualitas dengan ukuran besar dalam kemasan praktis berisi 9 biji.",
-                qty: "9 Biji",
-            },
-            {
-                img: "/img/products/pntl_tenis_kasar_9bj.png",
-                title: "pentol tenis kasar",
-                description: "Pentol tenis kasar yang gurih berkualitas dengan ukuran besar dalam kemasan praktis berisi 9 biji.",
-                qty: "9 Biji",
-            },
-            {
                 img: "/img/products/taso_10bj.png",
                 title: "Tahu Bakso",
                 description: "Tahu bakso lezat dengan isian daging sapi pilihan berkualitas dalam kemasan praktis berisi 10 biji.",
@@ -142,30 +112,42 @@ export const productsData = [
                 description: "Tahu bakso lezat dengan ukuran jumbo dan isian daging sapi pilihan berkualitas dalam kemasan praktis berisi 6 biji.",
                 qty: "6 Biji",
             },
+            {
+                img: "/img/products/pntl_tenis_halus_9bj.png",
+                title: "pentol tenis halus",
+                description: "Pentol tenis halus yang gurih berkualitas dengan ukuran besar dalam kemasan praktis berisi 9 biji.",
+                qty: "9 Biji",
+            },
+            {
+                img: "/img/products/pntl_tenis_kasar_9bj.png",
+                title: "pentol tenis kasar",
+                description: "Pentol tenis kasar yang gurih berkualitas dengan ukuran besar dalam kemasan praktis berisi 9 biji.",
+                qty: "9 Biji",
+            },
+            {
+                img: "/img/products/bumbu_kuah_bakso.png",
+                title: "Bumbu Kuah Bakso",
+                description: "Paduan rempah dan bumbu pilihan berkualitas yang menghasilkan kuah bakso dengan cita rasa khas yang lezat.",
+                qty:"1 Bungkus untuk 5-8 Liter Air",
+            },
+            {
+                img: "/img/products/co_botol_100gr.png",
+                title: "Chili Oil Botol",
+                description: "Minyak cabai premium dengan perpaduan rempah pilihan yang memberikan sensasi pedas gurih pada berbagai hidangan.",
+                qty: "100 Gram",
+            },
+            {
+                img: "/img/products/co_saset.png",
+                title: "Chili Oil Sachet",
+                description: "Minyak cabai premium dengan perpaduan rempah pilihan yang memberikan sensasi pedas gurih pada berbagai hidangan.",
+                qty:"40 Gram",
+            },
         ]
     },
     {
         id:2,
         locale:"en",
         data: [
-            {
-                img: "/img/products/bumbu_kuah_bakso.png",
-                title: "Meatball Soup Seasoning",
-                description: "A blend of quality selected spices and herbs that creates a distinctive and delicious meatball soup broth.",
-                qty: "1 Pack for 5-8 Liters of Water",
-            },
-            {
-                img: "/img/products/co_botol_100gr.png",
-                title: "Chili Oil Bottle",
-                description: "Premium chili oil with selected spices that adds a savory spicy sensation to various dishes.",
-                qty: "100 Grams",
-            },
-            {
-                img: "/img/products/co_saset.png",
-                title: "Chili Oil Sachet",
-                description: "Premium chili oil with selected spices that adds a savory spicy sensation to various dishes.",
-                qty: "40 Grams",
-            },
             {
                 img: "/img/products/dimsum_15_biji.png",
                 title: "Dimsum 15 Pieces",
@@ -257,18 +239,6 @@ export const productsData = [
                 qty: "100 Pieces",
             },
             {
-                img: "/img/products/pntl_tenis_halus_9bj.png",
-                title: "Smooth Tennis Meatballs",
-                description: "Quality savory smooth tennis-sized meatballs in a practical package of 9 pieces.",
-                qty: "9 Pieces",
-            },
-            {
-                img: "/img/products/pntl_tenis_kasar_9bj.png",
-                title: "Coarse Tennis Meatballs",
-                description: "Quality savory coarse tennis-sized meatballs in a practical package of 9 pieces.",
-                qty: "9 Pieces",
-            },
-            {
                 img: "/img/products/taso_10bj.png",
                 title: "Tofu Meatballs",
                 description: "Delicious tofu meatballs filled with quality selected beef in a practical package of 10 pieces.",
@@ -285,6 +255,36 @@ export const productsData = [
                 title: "Jumbo Tofu Meatballs",
                 description: "Delicious jumbo-sized tofu meatballs filled with quality selected beef in a practical package of 6 pieces.",
                 qty: "6 Pieces",
+            },
+            {
+                img: "/img/products/pntl_tenis_halus_9bj.png",
+                title: "Smooth Tennis Meatballs",
+                description: "Quality savory smooth tennis-sized meatballs in a practical package of 9 pieces.",
+                qty: "9 Pieces",
+            },
+            {
+                img: "/img/products/pntl_tenis_kasar_9bj.png",
+                title: "Coarse Tennis Meatballs",
+                description: "Quality savory coarse tennis-sized meatballs in a practical package of 9 pieces.",
+                qty: "9 Pieces",
+            },
+            {
+                img: "/img/products/bumbu_kuah_bakso.png",
+                title: "Meatball Soup Seasoning",
+                description: "A blend of quality selected spices and herbs that creates a distinctive and delicious meatball soup broth.",
+                qty: "1 Pack for 5-8 Liters of Water",
+            },
+            {
+                img: "/img/products/co_botol_100gr.png",
+                title: "Chili Oil Bottle",
+                description: "Premium chili oil with selected spices that adds a savory spicy sensation to various dishes.",
+                qty: "100 Grams",
+            },
+            {
+                img: "/img/products/co_saset.png",
+                title: "Chili Oil Sachet",
+                description: "Premium chili oil with selected spices that adds a savory spicy sensation to various dishes.",
+                qty: "40 Grams",
             },
         ]
     },
