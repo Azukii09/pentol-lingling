@@ -25,7 +25,7 @@ export const BusinessSchemeData = [
             {
                 icon:<FaUsers className={"size-12"}/>,
                 title:"Reseller",
-                description:"Reseller bisa mengambil produk dari agen atau pusat, dan menjual ulang secara fleksibel serta tdk ada min pembelian untuk reseller",
+                description:"Reseller bisa mengambil produk dari agen atau pusat, dan menjual ulang secara fleksibel dan bisa dijual secara matang atau frozen",
             },
 
         ]
@@ -52,7 +52,7 @@ export const BusinessSchemeData = [
             {
                 icon: <FaUsers className={"size-12"}/>,
                 title: "Reseller",
-                description: "Resellers can obtain products from agents or center, and resell flexibly with no minimum purchase requirement.",
+                description: "Resellers can obtain products from agents or center, and flexibly resell them either cooked or frozen",
             },
         ]
     }
