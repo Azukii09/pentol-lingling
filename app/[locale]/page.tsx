@@ -32,7 +32,7 @@ export default function HomePage() {
             <MainBusinessScheme/>
 
             {/*separator*/}
-            <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-3.jpg"}/>
+            <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-taso.jpg"}/>
 
             <MainContact/>
         </>
