@@ -18,7 +18,7 @@ export default function HomePage() {
             <MainAbout/>
 
             {/*separator*/}
-            <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-1.jpg"}/>
+            <PageSeparatedSection text={tTagline('text')} img={"/img/separator/separator-meatball-3.jpg"}/>
 
             {/*products*/}
             <MainProducts/>
