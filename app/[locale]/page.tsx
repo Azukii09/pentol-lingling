@@ -24,7 +24,7 @@ export default function HomePage() {
             <MainProducts/>
 
             {/*separator*/}
-            <PageSeparatedSection text={"our services"} img={"/img/separator/separator-2.jpg"}>
+            <PageSeparatedSection text={"our services"} img={"/img/separator/separator-meatball-2.jpg"}>
                 <ProductAdvantages/>
             </PageSeparatedSection>
 
